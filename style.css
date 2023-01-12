@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_div {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f6f6f6;
+    display: grid;
+    place-items: center;
+}
+
+.music_container {
+    width: 22rem;
+    height: 35rem;
+    background-color: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 0.75rem 1.875rem 0.4rem rgba(0, 0, 0, 0.2);
+    padding: 1.875rem;
+    text-align: center;
+}
+
+.music_container #title {
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    word-spacing: 0.3125rem;
+    color: #171717;
+    margin: 1.25rem 0 0.3125rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-shadow: 0 0.2rem 0.3125rem;
+}
+
+.music_container #artist {
+    color: #cccaca;
+    text-transform: capitalize;
+    letter-spacing: 0.0625rem;
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.img_container {
+    width: 16rem;
+    height: 16rem;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0.75rem 1.875rem 0.3125rem rgba(0, 0, 0, 0.4);
+}
+
+.music_controls {
+    width: 12.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 0.625rem;
+}
+
+.music_controls .fas {
+    color: #111;
+    cursor: pointer;
+    font-size: 1.25rem;
+    filter: drop-shadow(0 0.75rem 1.875rem 0.3125rem rgba(0, 0, 0, 0.4));
+}
+
+.music_controls .main_button {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    background-color: #111;
+    color: #f6f6f6;
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music_controls .fas:hover {
+    color: grey;
+}
+
+.music_controls .fa-play:hover,
+.music_controls .fa-pause:hover {
+    background-color: #f6f6f6;
+    color: #111;
+    box-shadow: 0 0.625rem 1.25rem 0.125rem rgba(0, 0, 0, 0.4);
+}
+
+.anime {
+    animation: rotatePlayer 3s linear infinite;
+}
+
+@keyframes rotatePlayer {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* progress bar  */
+
+.progressbar_container {
+    width: 100%;
+    height: auto;
+    padding: 0.625rem 0;
+    margin-top: 0.625rem;
+}
+
+.progress_div {
+    width: 100%;
+    height: 0.3125rem;
+    border-radius: 2.5rem;
+    position: relative;
+    margin-top: 0.3125rem;
+    cursor: pointer;
+    appearance: none;
+    transition: width 1s linear;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+        0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07),
+        0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07),
+        0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+.progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    width: 0%;
+    height: 100%;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    appearance: none;
+}
+
+.progress_duration_meter {
+    display: flex;
+    justify-content: space-between;
+}
